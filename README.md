@@ -10,5 +10,5 @@
 ## 编译指令
 
 ```cpp
-g++ plugins/libsonolusjs/libsonolusjs.cpp -o plugins/libsonolusjs.so -fPIC -shared -std=c++17
+g++ plugins/libsonolusjs/libsonolusjs.cpp -o plugins/libsonolusjs.so -fPIC -shared -std=c++17 -DENABLE_MYSQL -DENABLE_SQLITE
 ```
