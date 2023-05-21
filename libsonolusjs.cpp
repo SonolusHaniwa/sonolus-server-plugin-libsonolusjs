@@ -49,6 +49,7 @@ void initBuild(string path) {
     int res = system(("cd \"" + path + "\" && npm run build").c_str());
     if (res) exit(3);
 
+    preload();
     string package_json = readFile((path + "/package.json").c_str());
     Json::Value arr; json_decode(package_json, arr);
     SkinItem skin; BackgroundItem background; EffectItem effect; ParticleItem particle;
@@ -112,7 +113,7 @@ class PluginSonolusjs: public SonolusServerPlugin {
             initBuild(argv[2]);
             serverRunner(argc, argv);
             exit(0);
-        }
+        } return;
     }
     void onPluginRouter(int argc, char** argv) const {
         
