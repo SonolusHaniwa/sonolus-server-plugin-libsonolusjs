@@ -2,14 +2,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void MKDIR(string path, int mode = 0777) {
-    #ifdef __linux__
-    mkdir(path.c_str(), mode);
-    #else
-    _mkdir(path.c_str());
-    #endif
-}
-
 void copyFolder(string src, string dst) {
     MKDIR(dst);
     for (auto& p: filesystem::directory_iterator(src)) {
@@ -88,8 +80,11 @@ class PluginSonolusjs: public SonolusServerPlugin {
     string onPluginVersion() const {
         return "1.0.0";
     }
+    string onPluginPlatformVersion() const {
+        return "1.3.0";
+    }
     string onPluginAuthor() const {
-        return "Burrito(Extend by LittleYang0531)";
+        return "Burrito(Extended by LittleYang0531)";
     }
     string onPluginLicense() const {
         return "MIT";
@@ -115,7 +110,7 @@ class PluginSonolusjs: public SonolusServerPlugin {
             exit(0);
         } return;
     }
-    void onPluginRouter(int argc, char** argv) const {
+    void onPluginRouter(int argc, char** argv, application *app) const {
         
     }
 };
