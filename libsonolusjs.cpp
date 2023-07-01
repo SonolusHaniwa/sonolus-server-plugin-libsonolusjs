@@ -81,7 +81,7 @@ class PluginSonolusjs: public SonolusServerPlugin {
         return "1.0.0";
     }
     string onPluginPlatformVersion() const {
-        return "1.4.2";
+        return sonolus_server_version;
     }
     string onPluginAuthor() const {
         return "Burrito(Extended by LittleYang0531)";
