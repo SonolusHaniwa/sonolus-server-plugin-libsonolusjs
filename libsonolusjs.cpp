@@ -16,10 +16,6 @@ void initCustomEngine(char** argv) {
     system(("cd \"" + root_dir + "\" && npm install").c_str());
 }
 
-bool fileExist(string path) {
-    ifstream fin(path.c_str());
-    return fin.is_open();
-}
 string uploadFile(string path) {
     ifstream fin(path.c_str());
     fin.seekg(0, ios::end);
