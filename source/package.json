@@ -1,14 +1,19 @@
 {
   "name": "sonolus-test-engine",
   "version": "0.0.1",
-  "description": "",
-  "title": "",
-  "subtitle": "",
-  "author": "",
-  "skin": "",
-  "background": "",
-  "effect": "",
-  "particle": "",
+  "i18n": [
+    {
+      "localization": "default",
+      "title": "",
+      "subtitle": "",
+      "author": "",
+      "skin": "",
+      "background": "",
+      "effect": "",
+      "particle": "",
+      "description": ""
+    }
+  ],
   "repository": "github:",
   "license": "MIT",
   "keywords": [
